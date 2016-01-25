@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+
+
+    <% include ./partials/header.ejs %>
+    <title>Admin Users :: Shop India</title>
+</head>
+<body>
+<form id="form1" >
+    <div class="container">
+        <div class="row">
+<% include ./partials/nav.ejs %>
+        </div>
+        <div class="row">
+            <div class="col-lg-3" >
+            <% include ./partials/AdminAsideMenu.ejs %>
+            </div>
+
+            <div class="col-lg-9" >
+                <div class="row" >
+                    <div   class="pull-left blackText13">
+                        <h2>Admin Users</h2>
+                    </div>
+                    <div class="pull-right" style="margin-top: 20px;">
+                        <a class="blackButton" href="/admin/users/edit">Create Admin</a>
+                    </div>
+                </div>
+                <div class="row well" style="height:40px;padding-top:10px;"  >
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label>User Name</label>
+                            </div>
+                            <div class="col-lg-3">
+                                <label>User Id</label>
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Admin Type</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <% for(var i=0;i<dataToDisplay.length;i++){%>
+
+                        <div class="row" style="border-bottom:1px solid #cbcaca;padding-bottom:10px;padding-top:10px;" >
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <a id="ancAdminName">
+                                            <a  href="/admin/users/edit?_id=<%= dataToDisplay[i]._id %>"><%= dataToDisplay[i].username %></a>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span  id="lblUserId"><%= dataToDisplay[i].password %></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <%}%>
+
+
+
+                 </div>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>

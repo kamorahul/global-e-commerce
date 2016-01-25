@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+
+    <% include ./partials/header.ejs %>
+    <title>Contact  US :: ShopIndia</title>
+</head>
+<body>
+<form id="form1" >
+    <div class="container">
+        <% include ./partials/header.ejs %>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="./public/images/logo.png" />
+            </div>
+            <uc1:search runat="server" ID="search" />
+        </div>
+        <div class="row">
+            <uc1:NavBar runat="server" ID="NavBar" />
+        </div>
+        <div class="clear"></div>
+        <div class="row">
+            <uc1:AsideMenu runat="server" ID="AsideMenu" />
+            <div class="col-lg-9" style="margin-left: 30px;">
+                <h2>Contact Us</h2>
+                <label>Name:</label>
+                <div>
+                    <asp:TextBox runat="server" ID="tb_CustName" placeholder="Name..." Width="300px" Height="35px"></asp:TextBox>
+                </div>
+                <div class="clear"></div>
+                <label>Mobile No.</label>
+                <div>
+                    <asp:TextBox runat="server" ID="tb_CustMoNo" placeholder="Mobile No..." Width="300px" Height="35px"></asp:TextBox>
+                </div>
+                <div class="clear"></div>
+                <label>Email Id:</label>
+                <div>
+                    <asp:TextBox runat="server" ID="tb_Email" placeholder="Email...." Width="300px" Height="35px"></asp:TextBox>
+                </div>
+                <div class="clear"></div>
+                <label>Message:</label>
+                <div>
+                    <asp:TextBox TextMode="MultiLine" runat="server" ID="tb_Message" placeholder="Write Your Query Here...." Width="300px" Height="90px"></asp:TextBox>
+                </div>
+                <div class="clear"></div>
+                <div>
+                    <asp:Button runat="server" ID="btn_Submit" CssClass="btn btn-default" OnClick="btn_Submit_Click" Text="Submit" />
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="panel-footer">
+            <uc1:Footer runat="server" ID="Footer" />
+        </div>
+    </div>
+</form>
+<script src="js/jQuery.js"></script>
+
+</body>
+</html>

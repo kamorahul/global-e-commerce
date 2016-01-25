@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+<%include ./partials/header.ejs%>
+</head>
+<body>
+<form id="form1">
+    <div class="container">
+        <div class="row">
+            <% include ./partials/nav.ejs%>
+        </div>
+        <div class="clear"></div>
+
+        <div class="row">
+            <div class="col-lg-3" style="margin-left: -40px;">
+                    <% include ./partials/AdminAsideMenu.ejs%>
+            </div>
+            <div class="col-lg-9" >
+                <div class="row" style="height: 70px;margin-left:30px; border-bottom: #808080 1px solid;">
+                    <div><h3>Add/Edit Admin Users</h3></div>
+
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div style="float: left;text-align:right;margin-right:5px;margin-top:8px; width:150px;">
+                        <label><font color="red">*</font>User Id:</label>
+                    </div>
+                    <div style="width:300px;float:left;">
+                        <input type="text"  placeholder="username..." id="admin_username" name="username" value="<%= user_id%>" />
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div style="width:150px;float:left;text-align:right;margin-right:5px;margin-top:8px; ">
+                        <label><font color="red">*</font>Password:</label>
+                    </div>
+                    <div style="width:300px;float:left;">
+                        <% if(id){%>
+                        <input type="hidden"  value="<%= id %>"    id="id"  />
+
+                        <%}%>
+                        <input type="password" height="40px" width="340px"   placeholder="password..." id="tb_Password" name="password" value="<%= password%>" />
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div style="float: left;width:150px;text-align:right;margin-right:5px; margin-top:8px;">
+                        <label><font color="red">*</font>Full Name:</label>
+                    </div>
+                    <div style="float: left;width:300px;">
+                        <input type="text"  placeholder="user id ... " id="admin_username" name="username" value="<%= username%>" />
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="clear"></div>
+                    <div style="margin-left: 48px;width:300px;">
+                        <label>Admin Type:</label>
+                    </div>
+                    <!--<div class="radiobtns" style="margin-left: 150px;">-->
+
+                        <!--<asp:RadioButtonList CssClass="radio" ID="rbtn_AdminType" runat="server" RepeatDirection="Vertical" Width="300px" CellPadding="-1" RepeatLayout="Table" TextAlign="Right">-->
+                            <!--<asp:ListItem Text="Admin" Value="Admin" Selected="True"></asp:ListItem>-->
+                            <!--<asp:ListItem Text="Moderator" Value="Moderator"></asp:ListItem>-->
+                            <!--<asp:ListItem Text="Customer" Value="Customer"></asp:ListItem>-->
+                        <!--</asp:RadioButtonList>-->
+                    <!--</div>-->
+                    <div class="clear"></div>
+                    <div style="margin-left: 180px;">
+                        <input type="submit"   name="Add"   class="btn btn-success" />
+                </div>
+                <div>
+                    <span><%= error %></span>
+                </div>
+            </div>
+        </div>
+            </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+ <% include ./partials/header.ejs %>
+    <style>
+        body {
+            background-image:url("../public/images/AdminBackground.jpg");
+
+        }
+    </style>
+    <title>Admin Login : : ShopIndia</title>
+</head>
+<body>
+<form id="form1" >
+
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="../public/images/logo.png" />
+
+            </div>
+            <div class="col-lg-6">
+
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="row ">
+            <form action="/" method="post" >
+
+
+            <div class="col-lg-4     well" style="margin-left: 350px;opacity:0.7; margin-top: 90px;">
+                <div>
+                    <div style="text-align:center;"><span><% error %></span></div>
+                    <div class="clear">
+                        <label >Username:</label>
+                    </div>
+                    <input type="text" height="40px" width="340px"  placeholder="username..." id="admin_username" name="username" />
+                </div>
+                <div class="clear"></div>
+                <div>
+                    <div class="clear">
+                        <label>Password:</label>
+                    </div>
+                    <input type="password" height="40px" width="340px"   placeholder="password..." id="tb_Password" name="password" />
+                </div>
+                <div class="clear"></div>
+                <div>
+                    <input type="submit"   name="Login"   class="btn btn-success" />
+                </div>
+            </div>
+            </form>
+        </div>
+
+
+
+    </div>
+</form>
+</body>
+</html>

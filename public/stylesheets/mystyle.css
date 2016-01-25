@@ -1,0 +1,49 @@
+﻿.container {
+    width:1200px;
+}
+.left_menu {
+   
+   
+    height: auto;
+    border:1px solid #e0e0e0; 
+    
+
+
+}
+.left_menu ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+
+}
+    .left_menu ul li {
+            display:block;
+            margin-right:0px;
+            padding:10px 0px 10px 0px;
+            border-bottom:1px #e0e0e0  solid;    
+    }
+    .left_menu ul li:first-child {
+        background-color:#e0e0e0;
+        color:white;
+        font-size:20px;
+
+    }
+        .left_menu ul li a {
+        display:block;
+        //border:1px solid black;
+        padding-left:2em;
+        }
+
+        .left_menu ul li:last-child {
+        border-bottom:none;
+        
+        }
+.clear {
+    height:30px;
+}
+.input_option {
+    width:400px;
+    height:40px;
+}
+.panel-footer {
+}
